@@ -1,3 +1,6 @@
 [submodule "3rdparty/sentencepiece-js"]
 	path = 3rdparty/sentencepiece-js
 	url = https://github.com/tqchen/sentencepiece-js
+[submodule "3rdparty/transformers"]
+	path = 3rdparty/transformers
+	url = https://github.com/huggingface/transformers.git

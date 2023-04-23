@@ -1,2 +1,5 @@
 -f https://mlc.ai/wheels
 mlc-ai-nightly
+./3rdparty/transformers
+fschat
+protobuf<=3.20.2

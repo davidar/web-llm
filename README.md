@@ -53,7 +53,20 @@ Besides supporting WebGPU, this project also provides the harness for other kind
         Currently we support LLaMA and Vicuna.
 
         1. Get the original LLaMA weights in the huggingface format by following the instructions [here](https://huggingface.co/docs/transformers/main/model_doc/llama).
+            ```shell
+            pip3 install --user -r requirements.txt
+            python3 -m transformers.models.llama.convert_llama_weights_to_hf \
+                --input_dir /path/to/downloaded/llama/weights \
+                --model_size 7B --output_dir /output/path
+            ```
         2. Use instructions [here](https://github.com/lm-sys/FastChat#vicuna-weights) to get vicuna weights.
+            ```shell
+            python3 -m fastchat.model.apply_delta \
+                --base-model-path /path/to/llama-7b \
+                --target-model-path /output/path/to/vicuna-7b \
+                --delta-path lmsys/vicuna-7b-delta-v1.1 \
+                --low-cpu-mem
+            ```
         3. Create a soft link to the model path under dist/models
             ```shell
             mkdir -p dist/models
