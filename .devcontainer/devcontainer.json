@@ -27,7 +27,7 @@
 	"postCreateCommand": {
 		"python": "pip3 install --user -r requirements.txt",
 		"ruby": "gem install bundler jekyll jekyll-remote-theme",
-		"rust": "cargo install wasm-pack"
+		"wasm-pack": "curl https://rustwasm.github.io/wasm-pack/installer/init.sh -sSf | sh"
 	}
 
 	// Configure tool-specific properties.
